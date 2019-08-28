@@ -6,7 +6,6 @@ import io
 import requests
 import re
 import logging
-import time
 
 logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
@@ -38,7 +37,7 @@ def download_images(img_url_list, path, ad_title):
         try:
             extension = img_url.split(".")[-1]
             ad_title_formatted = ad_title.strip().replace(" ", "_")
-            img_path = path + "/" + ad_title_formatted + "_img_" + str(img_counter) + str(time.time()) + "." + extension
+            img_path = path + "/" + ad_title_formatted + "_img_" + str(img_counter) + "." + extension
             download_image(img_url, img_path)
             img_counter += 1
         except OSError:

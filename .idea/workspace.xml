@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="148b7196-8118-4379-b71c-93d4f8219d29" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/web_scraper/Vehicle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scraper/Vehicle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/downloader/ImageDownloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/downloader/ImageDownloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/File_Formatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/File_Formatter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_scraper/AutoLankaScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scraper/AutoLankaScraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_scraper/PatPatScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scraper/PatPatScraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_scraper/RiyapolaScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scraper/RiyapolaScraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_scraper/RiyasevanaScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scraper/RiyasevanaScraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/web_scraper/SiteVisitor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/web_scraper/SiteVisitor.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +176,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

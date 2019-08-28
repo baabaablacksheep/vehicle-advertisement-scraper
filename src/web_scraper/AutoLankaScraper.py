@@ -99,6 +99,6 @@ class AutoLankaScraper:
                     img_url_list.append("https:" + src_url)
 
                 return Vehicle(ad_link, ad_title, brand, model, model_year, body_type, img_url_list)
-        except():
+        except:
             logging.error("Error Occurred While Scraping Data from %s" % ad_link)
-            pass
+            return None

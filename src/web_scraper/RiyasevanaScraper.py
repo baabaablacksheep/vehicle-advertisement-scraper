@@ -96,4 +96,3 @@ class RiyasevanaScraper:
         except:
             logging.error("Error Occurred While Scraping Data from %s" % ad_link)
             return None
-            pass

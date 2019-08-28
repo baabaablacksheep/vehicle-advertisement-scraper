@@ -17,7 +17,7 @@ dir_path = config['main']['dir_path']  # "/home/sahan/Projects/Anotation_Project
 web_site_list = []
 web_site = config['main']['web_site']
 if web_site == "all":
-    web_site_list = ['carmudi', 'patpat', 'riyasevana', 'riyapola', 'autolanka']
+    web_site_list = ['ikman', 'carmudi', 'patpat', 'riyasevana', 'riyapola', 'autolanka']
 else:
     web_site_list = [web_site]
 

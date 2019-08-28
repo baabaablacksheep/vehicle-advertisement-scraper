@@ -1,0 +1,833 @@
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_honda_fit-hybrid_71198
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.6/ssl.py", line 1012, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.6/ssl.py", line 874, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.6/ssl.py", line 631, in read
+    v = self._sslobj.read(len, buffer)
+OSError: [Errno 22] Invalid argument
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 368, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "/usr/lib/python3.6/ssl.py", line 1012, in recv_into
+    return self.read(nbytes, buffer)
+  File "/usr/lib/python3.6/ssl.py", line 874, in read
+    return self._sslobj.read(len, buffer)
+  File "/usr/lib/python3.6/ssl.py", line 631, in read
+    v = self._sslobj.read(len, buffer)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError(22, 'Invalid argument'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError(22, 'Invalid argument'))
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_honda_fit-hybrid_71198
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec4a8>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/04-2019/71198/auto_1555800777814797775~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec4a8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/04-2019/71198/auto_1555800777814797775~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec4a8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_honda_fit-hybrid_71198
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec0b8>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/04-2019/71198/auto_15558007811735861727~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec0b8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/04-2019/71198/auto_15558007811735861727~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec0b8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_maruti-suzuki_alto-800_73695
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec7f0>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/07-2019/73695/auto_15624189841627499877~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec7f0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/07-2019/73695/auto_15624189841627499877~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec7f0>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_lexus_other_73495
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f9040fe7160>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/06-2019/73495/auto_1561887449590773655~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9040fe7160>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/06-2019/73495/auto_1561887449590773655~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9040fe7160>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_mark-ii_74126
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec710>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/07-2019/74126/auto_15635327001754959093~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec710>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/07-2019/74126/auto_15635327001754959093~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec710>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_mark-ii_74126
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 160, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/connection.py", line 57, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.6/socket.py", line 745, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 316, in connect
+    conn = self._new_conn()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 169, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec7b8>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 399, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/07-2019/74126/auto_156353270123835284~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec7b8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.autolanka.com', port=443): Max retries exceeded with url: /uploads/files/autos/07-2019/74126/auto_156353270123835284~.jpg (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f9041eec7b8>: Failed to establish a new connection: [Errno -2] Name or service not known',))
+root - ERROR - Image Couldn't Found in the Given URL : https://www.autolanka.com/uploads/auto_15634368531086562539~.jpeg
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481/toyota_hilux_hilux_revo/rocco,_2018_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481/toyota_hilux_hilux_revo/rocco,_2018_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481/toyota_hilux_hilux_revo/rocco,_2018_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481/toyota_hilux_hilux_revo/rocco,_2018_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/other/view_toyota_hilux_73481/toyota_hilux_hilux_revo/rocco,_2018_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446/toyota_premio_g_superior_black/fex,_2017_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446/toyota_premio_g_superior_black/fex,_2017_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446/toyota_premio_g_superior_black/fex,_2017_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446/toyota_premio_g_superior_black/fex,_2017_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_premio_73446/toyota_premio_g_superior_black/fex,_2017_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_maruti-suzuki_800_72685
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 370, in connect
+    ssl_context=context)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 355, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 368, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 344, in _make_request
+    self._validate_conn(conn)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 843, in _validate_conn
+    conn.connect()
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connection.py", line 370, in connect
+    ssl_context=context)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 355, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError(0, 'Error'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError(0, 'Error'))
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664/honda_cr_v_cr-v_/_4wd,_2015_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664/honda_cr_v_cr-v_/_4wd,_2015_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664/honda_cr_v_cr-v_/_4wd,_2015_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664/honda_cr_v_cr-v_/_4wd,_2015_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664/honda_cr_v_cr-v_/_4wd,_2015_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_73664/honda_cr_v_cr-v_/_4wd,_2015_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399/honda_vezel_daa_-_ru_3_/_z_grade,_2014_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399/honda_vezel_daa_-_ru_3_/_z_grade,_2014_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399/honda_vezel_daa_-_ru_3_/_z_grade,_2014_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399/honda_vezel_daa_-_ru_3_/_z_grade,_2014_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_Vezel_75399/honda_vezel_daa_-_ru_3_/_z_grade,_2014_img_1.jpeg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_toyota_vitz_73418
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 266, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 368, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 266, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))
+root - ERROR - Image Couldn't Found in the Given URL : https://www.autolanka.com/uploads/auto_15634368531086562539~.jpeg
+root - ERROR - Image Couldn't Found in the Given URL : https://www.autolanka.com/uploads/auto_15634368531086562539~.jpeg
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_honda_cr-v_74350
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 266, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 641, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/util/retry.py", line 368, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 603, in urlopen
+    chunked=chunked)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 387, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1331, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 266, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 51, in download_image
+    response = requests.get(img_url, stream=True)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/venv/lib/python3.6/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response',))
+root - ERROR - Image Couldn't Found in the Given URL : https://www.autolanka.com/uploads/files/autos/06-2016/ad197695/1464780000103830432_large~.jpg
+root - ERROR - Image Couldn't Found in the Given URL : https://www.autolanka.com/uploads/files/autos/06-2016/ad197695/14647800541059576525_large~.jpg
+root - ERROR - Image Couldn't Found in the Given URL : https://www.autolanka.com/uploads/files/autos/06-2016/ad197695/14647800441247700502_large~.jpg
+root - ERROR - Image Couldn't Found in the Given URL : https://www.autolanka.com/uploads/files/autos/06-2016/ad197695/1464780043121085909_large~.jpg
+root - ERROR - Image Couldn't Found in the Given URL : https://www.autolanka.com/uploads/files/autos/06-2016/ad197695/1464780053274845854_large~.jpg
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444/suzuki_celerio_vxi_-_auto/triptonic,_2016_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444/suzuki_celerio_vxi_-_auto/triptonic,_2016_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444/suzuki_celerio_vxi_-_auto/triptonic,_2016_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444/suzuki_celerio_vxi_-_auto/triptonic,_2016_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444/suzuki_celerio_vxi_-_auto/triptonic,_2016_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444/suzuki_celerio_vxi_-_auto/triptonic,_2016_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444/suzuki_celerio_vxi_-_auto/triptonic,_2016_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/car/view_suzuki_Celeric_75444/suzuki_celerio_vxi_-_auto/triptonic,_2016_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_land-rover_defender_70490
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_land-rover_defender_70490/land_rover_defender_defender-puma/khan,_2008_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_land-rover_defender_70490
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_land-rover_defender_70490/land_rover_defender_defender-puma/khan,_2008_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_land-rover_defender_70490
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_land-rover_defender_70490/land_rover_defender_defender-puma/khan,_2008_img_1.jpg'
+root - ERROR - Saving Image Failed in the directory /home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_land-rover_defender_70490
+Traceback (most recent call last):
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 41, in download_images
+    download_image(img_url, img_path)
+  File "/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/site_scraper/src/downloader/ImageDownloader.py", line 57, in download_image
+    with open(path, 'wb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sahan/Projects/Anotation_Project/sl_vehicle_site_scrape/2019-08-28/autolanka/cars/suv/view_land-rover_defender_70490/land_rover_defender_defender-puma/khan,_2008_img_1.jpg'

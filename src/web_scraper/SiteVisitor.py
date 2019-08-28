@@ -27,4 +27,4 @@ class SiteVisitor:
             return switcher.get(site_name, lambda: "Invalid Choice")
 
         ad_object_list = select_scraper(self.site_name).extract_data()
-        return ad_object_list
+        return list(filter(None.__ne__, ad_object_list))
